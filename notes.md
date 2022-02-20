@@ -41,3 +41,10 @@ Type annotations in action:
 > type inference only works around the return value of a function
 -----
 
+# Typed Arrays -> Arrays where each element is some consistent type of value
+> TS can do type inference when extracting values from an arrays
+> TS can prevent us from from adding incompatible values to the array
+> we can get help with 'map', 'forEach', 'reduce' functions
+> Flexible - arrays can still contain multiple different types
+
+# Where to use typed arrays? --> Any time we need to represent a collection of with some arbitrary sort order
