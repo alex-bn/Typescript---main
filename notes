@@ -34,3 +34,10 @@ Type annotations in action:
 > any   -> is a type, just as 'string' or 'boolean' are
         -> means TS has no idea what this is - can't check for correct property references
         -> avoid variables with 'any' at all costs
+-----
+# Type annotations for functions:
+> code we add to tell TS what type of arguments a function will receive and what type of vales it will return
+# Type inference for functions:
+> type inference only works around the return value of a function
+-----
+
