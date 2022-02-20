@@ -48,3 +48,12 @@ Type annotations in action:
 > Flexible - arrays can still contain multiple different types
 
 # Where to use typed arrays? --> Any time we need to represent a collection of with some arbitrary sort order
+
+# Tuples -> Array-like structure where each element represents some property of a record
+Object representing a 'drink':
+  color       -> brown
+  carbonated  -> true
+  sugar       -> 40
+
+[brown, true, 40] -> we'e lost the labels in this case
+                  -> the ordering part is critical
