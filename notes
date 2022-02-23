@@ -88,3 +88,25 @@ import faker from '@faker-js/faker';
 As of their v6 release, TS support is now native and does not require installing the @types declarations.
 
 ----------
+
+> tsc --init
+
+"outDir": "./build",  
+"rootDir": "./src",
+
+> tsc 
+# watch -> continuously compile the code
+> tsc -w
+
+------
+automate the build and run process:
+
+npm i nodemon concurrently
+
+"scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+
+------
