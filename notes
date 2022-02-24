@@ -165,3 +165,9 @@ Recap:
 > Sets up a contract between different classes
 > Use when we are trying to build up a definition of an object
 > Strongly couples classes together
+------------
+
+# anytime we use a built in node standard module/library (fs, http, etc) we need to install the type definition file:
+> npm i @types/node
+
+-------
