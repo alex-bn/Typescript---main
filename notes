@@ -110,3 +110,31 @@ npm i nodemon concurrently
   },
 
 ------
+# Bubble Sort -> double nested for loop
+sort(): void {
+    // bubble sort algorithm
+    const { length } = this.collection;
+    for (let i = 0; i < length; i++) {
+      for (let j = 0; j < length - i - 1; j++) {
+        if (this.collection[j] > this.collection[j + 1]) {
+          const leftHand = this.collection[j];
+          this.collection[j] = this.collection[j + 1];
+          this.collection[j + 1] = leftHand;
+        }
+      }
+    }
+  }
+
+> the swapping logic from above is not gonna work with characters
+# Strings in JavaScript are immutable -> we cannot change a character inside a string
+> Index signature in type string only permits reading
+> Remember that the |, union operator, TS behind the scenes is going to restrict the properties that we can access on the resulting type, so you'll only be able to access the properties that are common to both of them
+
+> We can make use of type guards to lift the restrictions imposed by the union operator: 
+# if (typeof this.collection === 'string') {}
+# if (this.collection instanceof Array) {}
+
+> Use typeof      -> to narrow type of a value to a primitive type: number, string, boolean, symbol
+> Use instanceof  -> narrow down every other type of value that is created with a constructor function: Array, Object etc
+
+------
