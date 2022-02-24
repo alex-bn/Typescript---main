@@ -171,3 +171,4 @@ Recap:
 > npm i @types/node
 
 -------
+enum  -> object that stores closely related values
