@@ -138,3 +138,30 @@ sort(): void {
 > Use instanceof  -> narrow down every other type of value that is created with a constructor function: Array, Object etc
 
 ------
+
+# Abstract class
+> Cannot be used to create an object directly
+> Only used as a parent class
+> Can contain real implementation for some methods
+> The implemented methods can refer to other methods that don't actually exists yet (we still have to provide names and types for the un-implemented methods)
+> Can make child classes promise to implement some other methods
+
+------
+export abstract class Sorter {
+  abstract compare(leftIndex: number, rightIndex: number): boolean;
+  abstract swap(leftIndex: number, rightIndex: number): void;
+  abstract length: number;
+.....
+
+# if the child class doesn't define a constructor we don't have to call super
+
+Recap:
+# Interfaces: 
+> Sets up a contract between different classes
+> Use when we have very different objects that we want to work together
+> Promotes loose coupling
+
+# Inheritance/Abstract classes:
+> Sets up a contract between different classes
+> Use when we are trying to build up a definition of an object
+> Strongly couples classes together

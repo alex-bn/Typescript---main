@@ -47,31 +47,46 @@ import { NumbersCollection } from './NumbersCollection';
 import { CharactersCollection } from './CharactersCollection';
 import { LinkedList } from './LinkedList';
 
-// const numbersCollection = new NumbersCollection([
-//   -99, 0, -4, 9, 4, 8, 2, 3, 100,
-// ]);
-
+// 1)
+const numbersCollection = new NumbersCollection([
+  -99, 0, -4, 9, 4, 8, 2, 3, 100,
+]);
+//
+// before refactoring
 // const sorter = new Sorter(numbersCollection);
 // sorter.sort();
 // console.log(numbersCollection.data);
 
-// const characterCollection = new CharactersCollection(
-//   'XxApOiUHGtdsadasd234234yas'
-// );
-// const sorter = new Sorter(characterCollection);
-// console.log(`Before sorting: ${characterCollection.data}`);
-// sorter.sort();
-// console.log(`After sorting: ${characterCollection.data}`);
+// after refactoring
+numbersCollection.sort();
+console.log(numbersCollection.data);
 
+// 2)
+const characterCollection = new CharactersCollection(
+  'XxApOiUHGtdsadasd234234yas'
+);
+
+// before refactoring
+// const sorter = new Sorter(characterCollection);
+// sorter.sort();
+// console.log(characterCollection.data);
+
+// after refactoring
+characterCollection.sort();
+console.log(characterCollection.data);
+
+// 3)
 const linkedList = new LinkedList();
 linkedList.add(500);
 linkedList.add(-10);
 linkedList.add(-3);
 linkedList.add(4);
 
-console.log(typeof linkedList);
-console.log(linkedList);
+// before refactoring
+// const sorter = new Sorter(linkedList);
+// sorter.sort();
+// linkedList.print();
 
-const sorter = new Sorter(linkedList);
-sorter.sort();
+// after refactoring
+linkedList.sort();
 linkedList.print();
