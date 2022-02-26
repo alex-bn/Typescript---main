@@ -191,3 +191,8 @@ enum  -> object that stores related values
 -> this says to the compiler: "There is a property called name with a type of string | undefined. It starts with a value of undefined. But every time I get or set that property, I want to treat it as type string."
 
 -----------
+Inheritance vs Composition:
+
+# Inheritance -> characterized by an 'is a' relationship between two classes
+# Composition -> characterized by a 'has a' relationship between two classes
+
