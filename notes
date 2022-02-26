@@ -171,4 +171,23 @@ Recap:
 > npm i @types/node
 
 -------
-enum  -> object that stores closely related values
+enum  -> object that stores related values
+      -> primary goal is to signal to other engineer that these are closely related values
+
+------------
+# Generics:
+> Like function arguments, but for types in class/function definitions
+> Allows us to define the type of a property/argument/return value at a future point
+> Used heavily when writing reusable code
+
+
+# ambient declaration: 
+> declare name: string
+-> this says to the compiler: "There is a property called name of type string. I shouldn't have to prove to you that name actually exists, but I want to use it anyway."
+> ambient declaration dows not generate code
+
+# definite assignment: 
+> name!: string
+-> this says to the compiler: "There is a property called name with a type of string | undefined. It starts with a value of undefined. But every time I get or set that property, I want to treat it as type string."
+
+-----------
