@@ -196,3 +196,6 @@ Inheritance vs Composition:
 # Inheritance -> characterized by an 'is a' relationship between two classes
 # Composition -> characterized by a 'has a' relationship between two classes
 
+---
+- type alias for a callback that is going to take no arguments and is going to have no return value
+type Callback = () => void;
