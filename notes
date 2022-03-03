@@ -199,3 +199,32 @@ Inheritance vs Composition:
 ---
 - type alias for a callback that is going to take no arguments and is going to have no return value
 type Callback = () => void;
+
+-----
+/////////////////////////////////
+// A quick reminder on accessors
+
+class Person {
+  constructor(public firstName: string, public lastName: string) {}
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person = new Person('first', 'last');
+// console.log(person);
+console.log(person.fullName);
+
+/////////////////////////////
+// Reminder on how this works in javascript
+const colors = {
+  color: 'red',
+  printColor() {
+    console.log(this.color);
+  },
+};
+
+colors.printColor();
+
+const printColor = colors.printColor;
+printColor(); // undefined
