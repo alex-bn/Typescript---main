@@ -1,7 +1,7 @@
 // import { User } from './User';
 // import { Company } from './Company';
 
-// Instructions to every other class on how they can be an argument to 'addMarker'
+// instructions to other class on how they can be an argument to addMarker
 export interface Mappable {
   location: {
     lat: number;
@@ -24,7 +24,7 @@ export class CustomMap {
     });
   }
 
-  // 1) bad code example -> duplicate code
+  // // 1) not the best solution -> duplicate code
   // addUserMarker(user: User): void {
   //   new google.maps.Marker({
   //     map: this.googleMap,
@@ -44,7 +44,7 @@ export class CustomMap {
   //   });
   // }
 
-  // // 2) more bad code -> CustomMap depends on the other classes (User/Company)
+  // // 2) not the best solution -> dependant on the different types
   // addMarker(mappable: User | Company): void {
   //   new google.maps.Marker({
   //     map: this.googleMap,
@@ -55,7 +55,7 @@ export class CustomMap {
   //   });
   // }
 
-  // 3) solution -> using an interface to invert the dependency between addMarker and the other classes
+  // 3) best solution -> invert the dependency: other classes have to accommodate CustomMap
   addMarker(mappable: Mappable): void {
     const marker = new google.maps.Marker({
       map: this.googleMap,
@@ -69,6 +69,7 @@ export class CustomMap {
       const infoWindow = new google.maps.InfoWindow({
         content: mappable.markerContent(),
       });
+
       infoWindow.open(this.googleMap, marker);
     });
   }

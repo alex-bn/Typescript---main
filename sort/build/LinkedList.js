@@ -59,6 +59,7 @@ class LinkedList extends Sorter_1.Sorter {
         return this.at(leftIndex).data > this.at(rightIndex).data;
     }
     swap(leftIndex, rightIndex) {
+        // this is not swapping the node is only swapping the values
         const leftNode = this.at(leftIndex);
         const rightNode = this.at(rightIndex);
         const leftHand = leftNode.data;

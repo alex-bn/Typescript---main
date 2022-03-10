@@ -9,15 +9,13 @@ export class CharactersCollection extends Sorter {
     return this.data.length;
   }
 
-  compare(leftIndex: number, rightIndex: number): boolean {
-    return (
-      this.data[leftIndex].toLowerCase() >
-      this.data[rightIndex].toLocaleLowerCase()
-    );
+  compare(index: number): boolean {
+    return this.data[index].toLowerCase() > this.data[index + 1].toLowerCase();
   }
 
   swap(leftIndex: number, rightIndex: number): void {
     const characters = this.data.split('');
+
     const leftHand = characters[leftIndex];
     characters[leftIndex] = characters[rightIndex];
     characters[rightIndex] = leftHand;

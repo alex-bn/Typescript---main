@@ -5,7 +5,7 @@
 
 Basic types in TS:
 # Type    -> Easy way to refer to the different properties + functions that a value has
-# Value     -> Is anything that we can assign to a variable
+# Value   -> Is anything that we can assign to a variable
 
 > Primitive_Type:    number, string, boolean, symbol, void, null, undefined
 > Object_Type:       functions, classes, arrays, objects
