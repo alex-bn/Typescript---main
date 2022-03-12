@@ -9,7 +9,6 @@ export interface Analyzer {
 export interface OutputTarget {
   print(report: string): void;
 }
-
 export class Summary {
   static winsAnalysisWithHtmlReport(team: string): Summary {
     return new Summary(new WinsAnalysis(team), new HtmlReport());

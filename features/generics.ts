@@ -1,6 +1,5 @@
-// more on generics
-
-// 1)
+//
+// Example of GENERICS with classes
 class ArrayOfNumbers {
   constructor(public collection: number[]) {}
 
@@ -8,7 +7,7 @@ class ArrayOfNumbers {
     return this.collection[index];
   }
 }
-// 2)
+
 class ArrayOfStrings {
   constructor(public collection: string[]) {}
 
@@ -17,23 +16,22 @@ class ArrayOfStrings {
   }
 }
 
-// a more generic class
-class ArrayOfAnything<T> {
+// making use of generics:
+class ArrayOFAnything<T> {
   constructor(public collection: T[]) {}
+
   get(index: number): T {
     return this.collection[index];
   }
 }
+// calling the generic class
+new ArrayOFAnything(['a', 'b', 'c']);
 
-new ArrayOfAnything<string>(['a', 'b', 'c']);
+// type inference applies to generics as well
+const arr = new ArrayOFAnything(['a', 'b', 'c']);
 
-//// corner cases ////
-
-// another instance of type inference
-const arr = new ArrayOfAnything(['a', 'b', 'c']);
-
-// Example of generics with functions
-
+//
+// Example of GENERICS with functions
 function printStrings(arr: string[]): void {
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
@@ -45,6 +43,7 @@ function printNumbers(arr: number[]): void {
     console.log(arr[i]);
   }
 }
+
 // making use of generics
 function printAnything<T>(arr: T[]): void {
   for (let i = 0; i < arr.length; i++) {
@@ -52,9 +51,15 @@ function printAnything<T>(arr: T[]): void {
   }
 }
 
-printAnything<string>(['a', 'g', 'h']);
+// calling the generic function
+printAnything<string>(['a', 'b', 'c']);
 
-// Generic constraints
+// functions also make use of type inference
+printAnything(['a', 'b', 'c']);
+
+//
+// GENERIC Constraints -> limiting the types of a generic
+
 class Car {
   print() {
     console.log('I am a car');
@@ -77,5 +82,7 @@ function printHousesOrCars<T extends Printable>(arr: T[]): void {
   }
 }
 
-printHousesOrCars([new House(), new House()]);
-printHousesOrCars([new Car(), new Car()]);
+// printHousesOrCars([1, 2, 3, 4]); // Type 'number' is not assignable to type 'Printable'
+
+printHousesOrCars<House>([new House(), new House()]);
+printHousesOrCars<Car>([new Car(), new Car()]);
