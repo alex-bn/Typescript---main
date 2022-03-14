@@ -1,44 +1,9 @@
 {
   "users": [
     {
-      "name": "test",
-      "age": 77,
-      "id": 1
-    },
-    {
-      "name": "New Record",
-      "age": 55,
-      "id": 2
-    },
-    {
-      "name": "New Record",
-      "age": 55,
-      "id": 3
-    },
-    {
-      "id": 4,
+      "id": 1,
       "name": "New Name",
-      "age": 2
-    },
-    {
-      "name": "New Name Test",
-      "age": 0,
-      "id": 5
-    },
-    {
-      "name": "New Name Test",
-      "age": 0,
-      "id": 6
-    },
-    {
-      "name": "New Name Test",
-      "age": 0,
-      "id": 7
-    },
-    {
-      "id": 8,
-      "name": "New Name Test",
-      "age": 0
+      "age": 49
     }
   ]
 }
